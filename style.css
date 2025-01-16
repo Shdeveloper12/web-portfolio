@@ -51,16 +51,21 @@ nav li a{
     border-radius: 5px;
     margin-right:10px;
     border: none;
+    transition: 0.4s ease-out;
 
+}
+.btn-primary:hover{
+    background-color: green;
+    cursor: pointer;
 }
 .banner-content{
     max-width: 580px;
-    margin-left: 215px;
+    margin-left: 185px;
     margin-top: 180px;
 }
 .banner-greetings{
     font-size: 45px;
-    font-weight: 600;
+    fonteight: 600;
 }
 .banner-title{
     font-size: 50px;
@@ -161,4 +166,38 @@ footer input[type="text"], footer input[type="email"], footer textarea{
     padding: 10px 20px;
     margin-bottom: 24px;
     border: none;
+}
+/* responsive media query */
+@media screen and (max-width: 576px){
+    .header{
+        background-image: none;
+    }
+    .banner, nav, nav>ul, .banner-content,
+    .skills-container, footer,
+    .about-items, .resume-container{
+        flex-direction: column;    
+    }
+    .btn-primary{
+        margin-bottom: 20px;
+    }
+    nav>ul{
+        gap: 20px;
+    }
+    .banner, .banner-content{
+        margin: 20px;
+    }
+    footer, .about{
+        padding: 0px;
+    }
+    .footer-column, .banner-profile-picture{
+        width: 100%;
+    }
+    footer input[type="text"], footer input[type="email"], footer textarea{
+        width: calc(100% - 40px);
+    }
+    .section-title, .section-description{
+        padding: 0px;
+       
+    }
+    
 }
